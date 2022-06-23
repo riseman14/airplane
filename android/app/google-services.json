@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "45541336265",
+    "project_id": "airplane-73e8c",
+    "storage_bucket": "airplane-73e8c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:45541336265:android:3fa7cda9f96b37ed32d918",
+        "android_client_info": {
+          "package_name": "com.richman.airplane"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "45541336265-fqqd70luj4u7nnv964egr8i85asd53h9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCSzSG1yjRT13pZ7xWgOToAo9_Wfe7kMBs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "45541336265-fqqd70luj4u7nnv964egr8i85asd53h9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
