@@ -29,4 +29,13 @@ class AuthService {
       throw e;
     }
   }
+
+  // ignore: non_constant_identifier_names
+  Future<void> SignOut() async {
+    try {
+      await _auth.signOut();
+    } catch (e) {
+      throw e;
+    }
+  }
 }

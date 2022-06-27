@@ -130,8 +130,7 @@ class SignUpPage extends StatelessWidget {
       return Container(
         alignment: Alignment.center,
         margin: EdgeInsets.only(
-          top: 50,
-          bottom: 53,
+          top: 15,
         ),
         child: Text(
           'Terms and Condition',
