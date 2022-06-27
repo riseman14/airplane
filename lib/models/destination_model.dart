@@ -2,11 +2,11 @@ import 'package:equatable/equatable.dart';
 
 class DestinationModel extends Equatable {
   final String id;
-  final String name;
-  final String city;
-  final String imageUrl;
-  final double rating;
-  final int price;
+  final dynamic name;
+  final dynamic city;
+  final dynamic imageUrl;
+  final dynamic rating;
+  final dynamic price;
 
   DestinationModel({
     required this.id,
