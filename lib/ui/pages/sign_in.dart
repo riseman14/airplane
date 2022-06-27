@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../shared/theme.dart';
 
-class SignUpPage extends StatelessWidget {
-  SignUpPage({Key? key}) : super(key: key);
+class SignInPage extends StatelessWidget {
+  SignInPage({Key? key}) : super(key: key);
 
   final TextEditingController nameController = TextEditingController(text: '');
   final TextEditingController emailController = TextEditingController(text: '');
@@ -19,7 +19,7 @@ class SignUpPage extends StatelessWidget {
       return Container(
         margin: EdgeInsets.only(top: 60),
         child: Text(
-          'Join us and get\nyour next journey',
+          'Sign In With Your Account',
           style: blackTextStyle.copyWith(
             fontSize: 32,
             fontWeight: semiBold,
@@ -29,14 +29,6 @@ class SignUpPage extends StatelessWidget {
     }
 
     Widget inputSection() {
-      Widget nameInput() {
-        return CustomtextFormField(
-          title: 'Full Name',
-          hintText: 'Your Full Name',
-          controller: nameController,
-        );
-      }
-
       Widget emailInput() {
         return CustomtextFormField(
           title: 'Email',
@@ -51,14 +43,6 @@ class SignUpPage extends StatelessWidget {
           hintText: 'Your Password',
           obscureText: true,
           controller: passwordController,
-        );
-      }
-
-      Widget hobylInput() {
-        return CustomtextFormField(
-          title: 'Hobby',
-          hintText: 'Your Hobby',
-          controller: hobbyController,
         );
       }
 
@@ -89,7 +73,7 @@ class SignUpPage extends StatelessWidget {
 
             return CustomButton(
                 margin: EdgeInsets.only(top: 30),
-                title: 'Get Started',
+                title: 'Sign In',
                 onPressed: () {
                   context.read<AuthCubit>().signUp(
                         email: emailController.text,
@@ -115,21 +99,15 @@ class SignUpPage extends StatelessWidget {
           ),
         ),
         child: Column(
-          children: [
-            nameInput(),
-            emailInput(),
-            passwordInput(),
-            hobylInput(),
-            submitButton()
-          ],
+          children: [emailInput(), passwordInput(), submitButton()],
         ),
       );
     }
 
-    Widget signInButton() {
+    Widget tacButton() {
       return GestureDetector(
         onTap: () {
-          Navigator.pushNamed(context, '/sign-in');
+          Navigator.pop(context);
         },
         child: Container(
           alignment: Alignment.center,
@@ -137,7 +115,7 @@ class SignUpPage extends StatelessWidget {
             top: 15,
           ),
           child: Text(
-            'Have an account? Sign in',
+            'Don\'t have an account? Sign Up',
             style: greyTextStyle.copyWith(
               fontSize: 16,
               fontWeight: light,
@@ -155,7 +133,7 @@ class SignUpPage extends StatelessWidget {
           padding: EdgeInsets.symmetric(
             horizontal: defaultMargin,
           ),
-          children: [title(), inputSection(), signInButton()],
+          children: [title(), inputSection(), tacButton()],
         ),
       ),
     );
