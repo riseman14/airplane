@@ -18,7 +18,7 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     context.read<DestinationCubit>().fetchDestinations();
-    // TODO: implement initState
+
     super.initState();
   }
 
@@ -135,7 +135,6 @@ class _HomePageState extends State<HomePage> {
             ),
           );
         }
-        // TODO: implement listener
       },
       builder: (context, state) {
         if (state is DestinationSuccess) {

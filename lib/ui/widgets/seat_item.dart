@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 
 class SeatItem extends StatelessWidget {
   final int status;
+  final String id;
   //NOTE: 0 = AVAILABLE 1 = SELECTED 2 = UNAVAILABLE
 
-  const SeatItem({Key? key, required this.status}) : super(key: key);
+  const SeatItem({Key? key, required this.status, required this.id})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -27,7 +27,6 @@ class SettingPage extends StatelessWidget {
           Navigator.pushNamedAndRemoveUntil(
               context, '/sign-up', (route) => false);
         }
-        // TODO: implement listener
       },
       builder: (context, state) {
         if (state is AuthLoading) {
